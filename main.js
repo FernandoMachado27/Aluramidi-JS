@@ -14,8 +14,15 @@ for (let contador = 0; contador < listaDeTeclas.length; contador++) {
         tocaSom(idAudio);
     }
 
-    tecla.onkeydown = function() {
-        tecla.classList.add('ativa');
+    tecla.onkeydown = function(evento) { // se tecla for pressionada
+
+        console.log(evento.code == 'Space');
+
+        if (evento.code === 'Space') {  // === -> compara não só o valor, mas também o tipo do dado
+            tecla.classList.add('ativa');
+        } else {
+            
+        }
     }
 
     tecla.onkeyup = function() {
